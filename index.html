@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Expense Tracker</title>
+ <link rel="stylesheet" href="./stylesheet/style.css">
+ <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+ <nav>
+  <div class="container-fluid bg-dark jumbotron">
+   <div class="row col-12 justify-content-center">
+    <h1 class="text-white">Expense Tracker</h1>
+   </div>
+  </div>
+ </nav>
+   
+
+ <main class="container">
+  <form autocomplete="off">
+   <div class="form-group row mt-5">
+    <label for="name" class="col-form-label col-12 col-lg-2">Transaction name</label>
+    <div class="col-12 col-lg-4">
+     <input type="text" class="form-control" id="name">
+    </div>
+    <label for="price" class="col-form-label col-12 col-lg-1">Expense</label>
+    <div class="col-12 col-lg-4">
+     <input type="text" class="form-control" id="price">
+    </div>
+   </div>
+   <div class="form-group row">
+    <label for="date" class="col-form-label col-12 col-lg-2">Date of Transaction</label>
+    <div class="col-12 col-lg-4 ">
+     <input type="date" class="form-control" id="date">
+    </div>
+   </div>
+   <button type="submit" class="btn btn-dark btn-block col-12 col-lg-1 offset-lg-2 mt-2" id="submit-button">Submit
+   </button>
+  </form>
+  <div class="row mt-5">
+   <table class="table table-striped">
+     <thead class="thead-dark">
+      <tr>
+       <th scope="col">Transaction</th>
+       <th scope="col">Date of Transaction</th>
+       <th scope="col">Expense (₱)</th>
+      </tr>
+     </thead>
+     <tbody id="table-body">
+      <tr id="row-total">
+       <td>&nbsp;</td>
+       <td class="text-right"><strong>Total:</strong></td>
+       <td id="data-total"></td>
+      </tr>
+     </tbody>
+   </table>
+  </div>
+ </main>
+
+ <script src="./app.js"></script>
+</body>
+</html>
